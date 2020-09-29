@@ -1,0 +1,37 @@
+:root{
+
+    --spacing:10px;
+    --blur:10px;
+    --base: #0B4F6C;
+}
+
+body{
+    text-align: center;
+    background-color:#040F16 ;
+    color:white;
+    font-size: 20px;
+}
+
+img{
+    padding: var(--spacing);
+    background-color: var(--base);
+    filter: blur(var(--blur));
+}
+
+.controls{
+    
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 5% 20% ;
+}
+label{
+    padding-left:2%;
+}
+input {
+    padding-left: 4%;
+}
+
+img{ 
+    margin: 0% 30%;
+}
+
+]

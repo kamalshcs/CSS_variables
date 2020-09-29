@@ -1,0 +1,44 @@
+
+<html>
+    <head>
+        <title>index</title>
+
+        <link rel="stylesheet" href="css/style.css">
+
+    </head>
+
+    <body>
+
+       <div class="controls">
+
+        <label for="spacing">Spacing:</label>
+        <input type="range" name="spacing" min="10" max-="200" value="10" data-sizing="px">
+
+        <label for="blur">Blur:</label>
+        <input type="range" name="blur" min="0" max="25" value="10" data-sizing="px">
+
+        <label for="base">Base Color:</label>
+        <input type="color" name="base" value="#0B4F6C">
+
+       </div> 
+
+       <img src="https://source.unsplash.com/user/erondu/1600x900" style="height:50%; width:50% auto;" >
+
+       
+       <script>
+
+        const inputs= document.querySelectorAll('.controls input');
+
+        function handleUpdate()
+        {
+            const suffix= this.dataset.sizing || '';
+            document.documentElement.style.setProperty(`--${this.name}`, this.value + suffix);
+        }
+
+        inputs.forEach(input => input.addEventListener('change' , handleUpdate));
+
+       </script>
+           
+
+    </body>
+</html>
